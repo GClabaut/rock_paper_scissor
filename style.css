@@ -10,3 +10,15 @@
     align-items: center;
     gap: 2rem;
 }
+
+button,
+input {
+    padding: 2px;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #3882f6;
+    color: #f9faf8;
+    font-weight: bold;
+}

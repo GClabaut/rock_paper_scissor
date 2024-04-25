@@ -8,42 +8,33 @@ let lose = 0;
 function playRound(getPlayerChoice) {
     if (getPlayerChoice === 'rock') {
         if (getComputerChoice() === 'rock') {
-            const resultTxt = 'Draw';
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'Draw';
         } else if (getComputerChoice() === 'paper') {
-            const resultTxt = 'You lose';
             lose ++;
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'You lose';
         } else {
-            const resultTxt = 'You win';
             win ++;
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'You win';
         }
     } else if (getPlayerChoice === 'paper') {
         if (getComputerChoice() === 'rock') {
-            const resultTxt = 'You win';
             win ++;
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'You win';
         } else if (getComputerChoice() === 'paper') {
-            const resultTxt = 'Draw';
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'Draw';
         } else {
-            const resultTxt = 'You lose';
             lose ++;
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'You lose';
         }
     } else if (getPlayerChoice === 'scissor') {
         if (getComputerChoice() === 'rock') {
-            const resultTxt = 'You lose';
             lose ++;
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'You lose';
         } else if (getComputerChoice() === 'paper') {
-            const resultTxt = 'You win';
             win ++;
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'You win';
         } else {
-            const resultTxt = 'Draw';
-            result.innerHTML = resultTxt;
+            result.innerHTML = 'Draw';
         }
     } else {
         result.innerHTML = "Please choose 'rock', 'paper' or 'scissor'";

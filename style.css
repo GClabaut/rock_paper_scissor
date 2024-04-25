@@ -22,3 +22,7 @@ button {
     color: #f9faf8;
     font-weight: bold;
 }
+
+.result {
+    text-align: center;
+}

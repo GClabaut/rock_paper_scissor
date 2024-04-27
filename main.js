@@ -9,39 +9,39 @@ let lose = 0;
 function playRound(getPlayerChoice) {
     if (getPlayerChoice === 'rock') {
         if (getComputerChoice() === 'rock') {
-            result.innerHTML = 'Draw';
+            result.textContent = 'Draw';
         } else if (getComputerChoice() === 'paper') {
             lose ++;
-            result.innerHTML = 'You lose';
+            result.textContent = 'You lose';
         } else {
             win ++;
-            result.innerHTML = 'You win';
+            result.textContent = 'You win';
         }
     } else if (getPlayerChoice === 'paper') {
         if (getComputerChoice() === 'rock') {
             win ++;
-            result.innerHTML = 'You win';
+            result.textContent = 'You win';
         } else if (getComputerChoice() === 'paper') {
-            result.innerHTML = 'Draw';
+            result.textContent = 'Draw';
         } else {
             lose ++;
-            result.innerHTML = 'You lose';
+            result.textContent = 'You lose';
         }
     } else if (getPlayerChoice === 'scissor') {
         if (getComputerChoice() === 'rock') {
             lose ++;
-            result.innerHTML = 'You lose';
+            result.textContent = 'You lose';
         } else if (getComputerChoice() === 'paper') {
             win ++;
-            result.innerHTML = 'You win';
+            result.textContent = 'You win';
         } else {
-            result.innerHTML = 'Draw';
+            result.textContent = 'Draw';
         }
     } else {
-        result.innerHTML = "Please choose 'rock', 'paper' or 'scissor'";
+        result.textContent = "Please choose 'rock', 'paper' or 'scissor'";
     }
 
-    score.innerHTML = `You - ${win} | ${lose} - Computer`
+    score.textContent = `You - ${win} | ${lose} - Computer`
 }
 
 function getComputerChoice() {

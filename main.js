@@ -1,6 +1,7 @@
 const startGame = document.querySelector('.input');
 const score = document.querySelector('.score');
 const result = document.querySelector('.result');
+const btn = document.querySelectorAll('button');
 
 let win = 0;
 let lose = 0;
@@ -54,11 +55,10 @@ function getComputerChoice() {
     }
 }
 
-startGame.addEventListener('submit', (e) => {
+btn.forEach((button) => button.addEventListener('click', (e) => {
     e.preventDefault();
 
-    const getPlayerChoice = e.target[0].value.toLowerCase();
+    const getPlayerChoice = e.target.textContent.toLowerCase();
 
     playRound(getPlayerChoice);
-
-})
+}));
